@@ -19,6 +19,7 @@ const total = useLoaderData()
         { name: 'Your Donation', value:(donation.length)},
         { name: 'Total Donation', value: (total.length) },
         
+        
     ];
 
     const COLORS = [ '#00C49F', '#FF444A'];

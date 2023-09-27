@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
+
 import swal from "sweetalert";
-// import { useParams } from "react-router-dom";
-// import Donation from "../Donation/Donation";
 
 const AddToCart = ({cart}) => {
     // console.log(cart);
@@ -20,7 +19,7 @@ if(!donationItems){
 addedDonationArray.push(cart);
 
 localStorage.setItem('donation',JSON.stringify(addedDonationArray));
-swal("Thank you", "Donation added successfully ", "success");
+swal("Thank you","Donation added successfully ","success");
 
 
 }else{
@@ -47,7 +46,7 @@ swal("Thank you", "Donation added successfully ", "success");
             <div className="hero-overlay bg-opacity-80 mt-[400px] h-[100px]"></div>
             <div>
 
-              <button style={{background:text_color}}   onClick={hanleAddToDonation} className="btn  text-white mt-96 item-end mr-[800px]">
+              <button style={{background:text_color}} onClick={hanleAddToDonation} className="btn  text-white mt-96 item-end mr-[800px]">
                 Donate  ${price}
               </button>
 

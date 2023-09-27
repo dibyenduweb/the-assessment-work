@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const DonationCard = ({cart}) => {
-    const { id, title,price,image, newimage, category, description } = cart || {};
+    const { id, title,price,image,  category, description } = cart || {};
 
     return (
         <>

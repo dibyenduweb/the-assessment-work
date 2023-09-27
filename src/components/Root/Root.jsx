@@ -3,12 +3,13 @@ import Header from '../Header/Header';
 
 const Root = () => {
     return (
-        <div id='stbg'>
+        <div>
            
             <Header></Header>
 
             <div>
             <Outlet></Outlet>
+            
             </div>
           
         </div>
