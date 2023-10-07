@@ -1,33 +1,26 @@
-import { useLoaderData } from "react-router-dom";
-import Hero from "../Hero/Hero";
-import Cards from "../Cards/Cards";
+
+import Contact from "../../section/Contact";
+import Review from "../../section/Review";
+import Footer from "../Footer/Footer";
+import Banner from "./Banner";
+import Header from "./Header";
+import Service from "./Service";
 
 
-
-
-// chages
 const Home = () => {
-
-    const pageData = useLoaderData();
-
-    
     return (
-       <>
-        <div>
-         <Hero></Hero>
-</div>
-
-<div  className="grid lg:grid-cols-4 px-24 gap-8 mt-4 ">
-{
-    pageData.map(cards => <Cards key={cards.id} cards={cards}></Cards> )
-
-}
-</div>
-
-
-
-</>
-
+        <>
+        <div className="h-[500px] relative text-white bg-cover " style={{backgroundImage: 'url(https://i.ibb.co/hKsgV7K/photo-1614149162883-504ce4d13909.jpg)'}}>
+        <Header></Header>
+        <Banner></Banner>
+        </div>
+       <Service></Service>
+     <Review></Review>
+     <Contact></Contact>
+     <Footer></Footer>
+            
+            </>
+       
     );
 };
 

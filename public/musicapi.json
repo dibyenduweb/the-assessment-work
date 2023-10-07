@@ -1,0 +1,53 @@
+{
+    "items": [
+      {
+        "id": 1,
+        "name": "Event Ticketing",
+        "image": "ticketing.png",
+        "price": "$25 - $150",
+        "short_description": "Secure your spot at the festival of your choice with our event ticketing services.",
+        "button": "Buy Tickets"
+      },
+      {
+        "id": 2,
+        "name": "VIP Experience",
+        "image": "vip.jpg",
+        "price": "$200 - $500",
+        "short_description": "Upgrade your festival experience with VIP access, exclusive perks, and premium seating.",
+        "button": "Upgrade to VIP"
+      },
+      {
+        "id": 3,
+        "name": "Camping Packages",
+        "image": "camping.jpg",
+        "price": "$50 - $200",
+        "short_description": "Enjoy the full festival experience by camping on-site with our convenient packages.",
+        "button": "Book Camping"
+      },
+      {
+        "id": 4,
+        "name": "Food and Beverage",
+        "image": "food.jpg",
+        "price": "$10 - $50",
+        "short_description": "Explore a variety of delicious food and beverage options at the festival grounds.",
+        "button": "View Menu"
+      },
+      {
+        "id": 5,
+        "name": "Transportation",
+        "image": "transportation.png",
+        "price": "$20 - $80",
+        "short_description": "Ensure hassle-free travel to and from the festival with our transportation services.",
+        "button": "Book Ride"
+      },
+      {
+        "id": 6,
+        "name": "Merchandise Shop",
+        "image": "merchandise.jpg",
+        "price": "$15 - $60",
+        "short_description": "Get festival merchandise to remember your experience and show your support.",
+        "button": "Shop Now"
+      }
+    ]
+  }
+  

@@ -1,55 +1,57 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import {
-  createBrowserRouter,
-  RouterProvider,
-  
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-} from "react-router-dom";
-import Root from './components/Root/Root';
-import Home from './components/Home/Home';
-import ErrorPage from './components/ErrorPage/ErrorPage';
-import Donation from './components/Donation/Donation';
-import Statistics from './components/Statistics/Statistics';
-import DonationDetails from './components/DonationDetails/DonationDetails';
-
-
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Root from "./components/Root";
+import Login from "./components/Login";
+import Register from "./components/Register";
+import AuthProvider from "./Provider/AuthProvider";
+import Orders from "./components/Orders";
+import PrivateRoute from "./routes/PrivateRoute";
+import Profile from "./components/Profile";
+import Home from "./components/Home/Home";
+import Service from "./components/Home/Service";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement:<ErrorPage></ErrorPage>,
-    children:[
+    children: [
       {
-        path:'/',
-        loader: () => fetch('/donationdata.json'),
-        element:<Home></Home>
-      },
-      {
-        path:'/donate',
-        element:<Donation></Donation>
-      },
-      {
-        path:'/statistics',
-        loader: () => fetch('/donationdata.json'),
-        element:<Statistics></Statistics>
+        path: "/",
+        element: <Home></Home>,
         
       },
       {
-        path:'/donatedata/:id',
-        element: <DonationDetails></DonationDetails>,
-        loader: () => fetch('/donationdata.json')
+        path: "/login",
+        element: <Login></Login>
+      },
+      {
+        path: "/register",
+        element: <Register></Register>
+      },
+      {
+        path:"/service",
+        element:<Service></Service>,
+        loader:() => fetch('/musicapi.json')
+      },
+      {
+        path:"/orders",
+        element:<PrivateRoute><Orders></Orders></PrivateRoute>
+      },{
+        path:"/profile",
+        element:<PrivateRoute><Profile></Profile></PrivateRoute>
       }
-     
     ]
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
+   
+    <AuthProvider>
     <RouterProvider router={router} />
-
-  </React.StrictMode>,
-)
+    </AuthProvider>
+  </React.StrictMode>
+);
