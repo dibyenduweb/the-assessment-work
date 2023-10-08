@@ -1,25 +1,33 @@
-/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 
-import react from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
-const Service =() => {
-const cards = useLoaderData();
-console.log(cards);
- 
-
+const Service =({music}) => {
+console.log(music);
 
 return (
-        <div className="p-8">
-            <h1>Service</h1>
-            <div>
-         
-            </div>
-            <div>
-
+  <>
+        <div>
+        <div className="lg:p-14  w-72">
+            <div className="card w-96 bg-base-100 shadow-xl">
+  <figure className="px-10 ">
+    <img  src={music.image} alt="Shoes" className="rounded-xl" />
+  </figure>
+  <div className="card-body items-center text-center">
+    <h2 className="card-title">{music.name}</h2>
+    <p>{music.short_description}</p>
+    <p>Price: ${music.price}</p>
+    <div className="card-actions">
+      <Link to={`/details/${music.id}`}>
+      <button className="btn btn-primary">{music.button}</button>
+      </Link>
+    </div>
   </div>
-  </div>
+</div>
+         </div>
+        </div>
+  </>
     );
 };
 

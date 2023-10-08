@@ -23,7 +23,7 @@ const Register = () => {
           setRegError('Passward must be 6 caractor or number');
           return;
         }
-        else if(!/A-Z/.test(password)){
+        else if(!/^[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)){
               setRegError('your password shoud be like this Example1@');
               return;
         }

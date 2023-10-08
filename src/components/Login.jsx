@@ -32,8 +32,10 @@ const Login = () => {
       }
       const handGoogleSignIn = () =>{
         signInWithGoogle()
+        
         .then(result => {
           console.log(result.user);
+          navigate('/');
         })
         .catch(error => {
           console.log(error);
@@ -78,7 +80,7 @@ const Login = () => {
             succses &&  <p className="text-green-500">{succses}</p>
            }
      <p>Create new account<Link to="/register"><button className='btn '>Register</button></Link></p>
-      <p><button onClick={handGoogleSignIn} className='btn btn-ghost'>Google</button></p>
+      <p><button onClick={handGoogleSignIn} className='btn btn-accent'>Google</button></p>
       </div>
     </div>
   </div>

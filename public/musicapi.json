@@ -1,53 +1,50 @@
-{
-    "items": [
-      {
-        "id": 1,
-        "name": "Event Ticketing",
-        "image": "ticketing.png",
-        "price": "$25 - $150",
-        "short_description": "Secure your spot at the festival of your choice with our event ticketing services.",
-        "button": "Buy Tickets"
-      },
-      {
-        "id": 2,
-        "name": "VIP Experience",
-        "image": "vip.jpg",
-        "price": "$200 - $500",
-        "short_description": "Upgrade your festival experience with VIP access, exclusive perks, and premium seating.",
-        "button": "Upgrade to VIP"
-      },
-      {
-        "id": 3,
-        "name": "Camping Packages",
-        "image": "camping.jpg",
-        "price": "$50 - $200",
-        "short_description": "Enjoy the full festival experience by camping on-site with our convenient packages.",
-        "button": "Book Camping"
-      },
-      {
-        "id": 4,
-        "name": "Food and Beverage",
-        "image": "food.jpg",
-        "price": "$10 - $50",
-        "short_description": "Explore a variety of delicious food and beverage options at the festival grounds.",
-        "button": "View Menu"
-      },
-      {
-        "id": 5,
-        "name": "Transportation",
-        "image": "transportation.png",
-        "price": "$20 - $80",
-        "short_description": "Ensure hassle-free travel to and from the festival with our transportation services.",
-        "button": "Book Ride"
-      },
-      {
-        "id": 6,
-        "name": "Merchandise Shop",
-        "image": "merchandise.jpg",
-        "price": "$15 - $60",
-        "short_description": "Get festival merchandise to remember your experience and show your support.",
-        "button": "Shop Now"
-      }
-    ]
+[
+  {
+    "id": 1,
+    "name": "Rock Festivals",
+    "image": "https://i.ibb.co/1MwXTN6/6.png",
+    "price": 150000,
+    "short_description": "Experience legendary bands and unforgettable performances at iconic rock events. Dive into the world of rock music.",
+    "button": "Book Now"
+  },
+  {
+    "id": 2,
+    "name": "Electronic Dance Music Events",
+    "image": "https://i.ibb.co/JcbDpCS/5.png",
+    "price": 200000,
+    "short_description": "Immerse yourself in the electrifying world of EDM with high-energy music festivals and dance parties.",
+    "button": "Book Now"
+  },
+  {
+    "id": 3,
+    "name": "Indian Singer Music",
+    "image": "https://i.ibb.co/HV718M7/2.png",
+    "price": 100000,
+    "short_description": "Get festival merchandise to remember your experience and show your support for Indian singers. Grab exclusive items now.",
+    "button": "Book Now"
+  },
+  {
+    "id": 4,
+    "name": "Hip-Hop and Rap Shows",
+    "image": "https://i.ibb.co/WKsnJw2/1.png",
+    "price": 90000,
+    "short_description": "Feel the rhythm and rhymes of hip-hop and rap artists at urban music festivals and concerts.",
+    "button": "Book Now"
+  },
+  {
+    "id": 5,
+    "name": "College Function Events",
+    "image": "https://i.ibb.co/sy5x9nJ/3.png",
+    "price": 800000,
+    "short_description": "Ensure hassle-free travel to and from the festival with our transportation services. Book your transport for a convenient festival.",
+    "button": "Book Now"
+  },
+  {
+    "id": 6,
+    "name": "Jazz and Blues Festivals",
+    "image": "https://i.ibb.co/HHrwgQn/4.png",
+    "price": 500000,
+    "short_description": "Dive into the smooth sounds of jazz and soulful blues tunes at renowned music festivals. Book your spot to savor the music.",
+    "button": "Book Now"
   }
-  
+]

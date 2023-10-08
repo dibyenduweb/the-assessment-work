@@ -15,14 +15,13 @@ const Header = () => {
 
   const navLinks = <>
   <li><NavLink to="/">Home</NavLink></li>
-  <li><NavLink to="/login">Login</NavLink></li>
-  <li><NavLink to="/service">Service</NavLink></li>
-  <li><NavLink to="/orders">orders</NavLink></li>
+  <li><NavLink to="/blog">Blogs</NavLink></li>
+  <li><NavLink to="/contact">Contact</NavLink></li>
   {user &&
     <>
     
   <li><NavLink to="/profile">Profile</NavLink></li>
-  <li><NavLink to="/desbord">desbord</NavLink></li>
+
     </>
   }
     </>
@@ -37,7 +36,7 @@ const Header = () => {
                   {navLinks}
               </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">The Music Show</a>
+          <a className="btn btn-ghost normal-case lg:text-xl">The Music Show</a>
       </div>
       <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -53,7 +52,7 @@ const Header = () => {
             </> 
             :
             <Link to='/login'>
-                <button className='btn btn-sm'>Login</button>
+                <button className='btn mr-10 btn-sm'>Login</button>
             </Link>
         }
        
