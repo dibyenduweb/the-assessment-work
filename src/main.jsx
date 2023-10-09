@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path:"/details/:id",
-        element:<ServiceDetails></ServiceDetails>,
+        element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader:() => fetch('/musicapi.json')
      
       },{
@@ -53,7 +53,8 @@ const router = createBrowserRouter([
       },
       {
         path:'/blog',
-        element:<Blogs></Blogs>
+        element:<Blogs></Blogs>,
+        loader:() => fetch('/musicapi.json')
       },
       {
         path:'/contact',

@@ -1,48 +1,82 @@
-import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
-import { AuthContext } from "../Provider/AuthProvider";
+import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "./Home/Header";
 import { FaEye,FaEyeSlash } from 'react-icons/fa';
+import useAuth from "../Hooks/useAuth";
+
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 const Register = () => {
-  const [regError, setRegError] = useState('');
+const {createtUser,handleUpdateProfile} =useAuth();
+
+const [regError, setRegError] = useState('');
   const [succses, setSuccses] = useState('');
   const [viewPassword, setViewPassword] = useState(false);
 
-
-  const {createtUser} = useContext(AuthContext);
+ const navigate = useNavigate()
+  
+  // // const {createtUser} = useContext(AuthContext);
 
     const handleRegister = e => {
         e.preventDefault();
         const name = e.target.name.value;
         const email = e.target.email.value;
+        const img =e.target.img.value;
         const password = e.target.password.value;
-        console.log(name, email, password);
+        console.log(name,img, email, password);
 
-        if(password.length <6){
-          setRegError('Passward must be 6 caractor or number');
-          return;
-        }
-        else if(!/^[a-zA-Z0-9!@#$%^&*]{6,16}$/.test(password)){
-              setRegError('your password shoud be like this Example1@');
-              return;
-        }
-      //rest 
+         //rest error
       setRegError('');
       setSuccses('');
+//password validation
 
-        createtUser(email, password)
-      .then( result =>{
-        console.log(result.user);
-        setSuccses('Account created succsesfully')
+
+       if (password.length <6 ){
+        toast('Password must be 6 characters or longer');
+          return;
+        }
+        else if(!/[A-Z]/.test(password)){
+            setRegError('your password shud be one uppercase & number & symbol')
+            return;
+        }
+        else if(!/[0-9]/.test(password)){
+            setRegError('your password shud be one uppercase & number & symbol')
+            return;
+        }
+        else if(!/[ ~!@#$%^&*()+-/*`:;"'<>,.{} ]/.test(password)){
+            setRegError('your password shud be one uppercase & number & symbol')
+            return;
+        }
+// create user
+      createtUser(email,password)
+      .then(res => {
+        handleUpdateProfile(name,img)
+        .then(()=>{
+          console.log(res.user)
+          toast('Account created successfully')
+          return navigate('/login');
+  
+
+        })
+      
       })
-      .catch(error =>{
-        console.error(error);
-        // setRegError(error.message);
-        setRegError('email id allradey use');
+      .catch(error => {
+        console.log(error)
+        toast('Email address already used');
+        return;
+
+      })
         
+      
 
-      })
+      
+      // .catch(error =>{
+      //   console.error(error);
+      //   //setRegError(error.message);
+      //   setRegError('Email address already used');
+      // })
 
     }
 
@@ -55,7 +89,7 @@ const Register = () => {
             <h1 className="text-5xl font-bold">Register!</h1>
            
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card flex-shrink-0 w-96 shadow-2xl bg-base-100">
             <div className="card-body">
            <form onSubmit={handleRegister}>
            <div className="form-control">
@@ -71,15 +105,22 @@ const Register = () => {
                 <input type="email" name="email" placeholder="email" className="input input-bordered" required />
               </div>
               <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Image Url</span>
+                                </label>
+                                <input type="text" placeholder="image url" className="input input-bordered" name='img' />
+                            </div>
+
+              <div className="form-control">
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
                 <div className="relative">
-                <input 
+                <input  
                 type={ viewPassword ? "text" : "password" }
                 name="password" 
                 placeholder="password" 
-                className="input input-bordered" required />
+                className="input input-bordered w-80" required />
                 <span className="absolute top-4 right-3 " onClick={ () => setViewPassword(! viewPassword)}>
                   {
                      viewPassword ? <FaEyeSlash></FaEyeSlash> :<FaEye></FaEye>
@@ -101,10 +142,11 @@ const Register = () => {
            {
             succses &&  <p className="text-green-500">{succses}</p>
            }
-           <p>Allrady have account<Link to="/login"><button className='btn '>Login</button></Link></p>
+           <p>Already have an account, just <Link to="/login"><button className='btn btn-primary ml-2'>login</button></Link></p>
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div></>
     );
 };

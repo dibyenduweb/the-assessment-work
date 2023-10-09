@@ -5,7 +5,12 @@
     "image": "https://i.ibb.co/1MwXTN6/6.png",
     "price": 150000,
     "short_description": "Experience legendary bands and unforgettable performances at iconic rock events. Dive into the world of rock music.",
-    "button": "Book Now"
+    "description": "Rock Festivals: Immerse yourself in the world of legendary rock music, where guitar riffs and powerful vocals transport you to a realm of timeless classics. Feel the energy of iconic bands and unforgettable performances that have shaped the history of rock. Join us for an unforgettable journey through the heart and soul of rock 'n' roll, where every note resonates with passion and rebellion.",
+    "singer": "Justin bieber",
+    "duration_hours": 2,
+    "button": "Book Now",
+    "details_button": "See Details",
+    "songs": 5
   },
   {
     "id": 2,
@@ -13,15 +18,25 @@
     "image": "https://i.ibb.co/JcbDpCS/5.png",
     "price": 200000,
     "short_description": "Immerse yourself in the electrifying world of EDM with high-energy music festivals and dance parties.",
-    "button": "Book Now"
+    "description": "Electronic Dance Music Events: Immerse yourself in the pulsating beats and electrifying atmosphere of EDM. Join us for high-energy music festivals and dance parties that will keep you moving all night long. Let the music and lights take you on a journey you won't forget.",
+    "singer": "Alan Walker",
+    "duration_hours": 2,
+    "button": "Book Now",
+    "details_button": "See Details",
+    "songs": 8
   },
   {
     "id": 3,
-    "name": "Indian Singer Music",
+    "name": "Indian Music Festival",
     "image": "https://i.ibb.co/HV718M7/2.png",
     "price": 100000,
     "short_description": "Get festival merchandise to remember your experience and show your support for Indian singers. Grab exclusive items now.",
-    "button": "Book Now"
+    "description": "Indian Music Festival: Celebrate the rich tapestry of Indian music with our festival merchandise. Show your support for Indian singers and artists with our exclusive items. From traditional melodies to contemporary hits, embrace the soulful sounds of India.",
+    "singer": "Arijit singh, Shreya ghoshal, Sonu nigam",
+    "duration_hours": 3,
+    "button": "Book Now",
+    "details_button": "See Details",
+    "songs": 7
   },
   {
     "id": 4,
@@ -29,7 +44,12 @@
     "image": "https://i.ibb.co/WKsnJw2/1.png",
     "price": 90000,
     "short_description": "Feel the rhythm and rhymes of hip-hop and rap artists at urban music festivals and concerts.",
-    "button": "Book Now"
+    "description": "Hip-Hop and Rap Shows: Experience the raw energy and lyrical prowess of hip-hop and rap artists at our urban music festivals and concerts. Get ready to feel the rhythm, groove to the beats, and witness unforgettable performances.",
+    "singer": "Kanye West, Drake,Tyler,",
+    "duration_hours": 2,
+    "button": "Book Now",
+    "details_button": "See Details",
+    "songs": 6
   },
   {
     "id": 5,
@@ -37,7 +57,12 @@
     "image": "https://i.ibb.co/sy5x9nJ/3.png",
     "price": 800000,
     "short_description": "Ensure hassle-free travel to and from the festival with our transportation services. Book your transport for a convenient festival.",
-    "button": "Book Now"
+    "description": "College Function Events: Make your festival experience hassle-free with our convenient transportation services. We ensure seamless travel to and from the event, allowing you to focus on enjoying the festivities without any worries.",
+    "singer": "Various Artists",
+    "duration_hours": 2,
+    "button": "Book Now",
+    "details_button": "See Details",
+    "songs": 5
   },
   {
     "id": 6,
@@ -45,6 +70,11 @@
     "image": "https://i.ibb.co/HHrwgQn/4.png",
     "price": 500000,
     "short_description": "Dive into the smooth sounds of jazz and soulful blues tunes at renowned music festivals. Book your spot to savor the music.",
-    "button": "Book Now"
+    "description": "Jazz and Blues Festivals: Immerse yourself in the world of smooth jazz and soulful blues tunes at renowned music festivals. Book your spot to savor the rich, melodic experience that only jazz and blues can offer.",
+    "singer": "Hairband,Duke Robillard & Herb Ellis, Gustav Peter Wöhler Band",
+    "duration_hours": 7,
+    "button": "Book Now",
+    "details_button": "See Details",
+    "songs": 7
   }
 ]
